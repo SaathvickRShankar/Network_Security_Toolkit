@@ -64,7 +64,8 @@ def main(target_ip, gateway_ip):
 
 if __name__ == "__main__":
     # --- IMPORTANT: Replace with your network's IPs ---
-    target_ip = "192.168.0.173"  # IP of the device you want to target
+    target_ip = ""  # IP of the device you want to target
     gateway_ip = "192.168.0.1"  # IP of your router
     
+
     main(target_ip, gateway_ip)
