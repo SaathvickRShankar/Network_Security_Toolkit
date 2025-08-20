@@ -13,12 +13,12 @@ def arp_spoof_detector(packet):
         try:
             # The real MAC address of the gateway that you saved.
             # ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
-            trusted_gateway_mac = "04:95:e6:b3:28:30"  # <-- PASTE YOUR ROUTER'S MAC ADDRESS HERE
+            trusted_gateway_mac = ""  # <-- PASTE YOUR ROUTER'S MAC ADDRESS HERE
             # ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
             # The real IP address of the gateway.
             # ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
-            trusted_gateway_ip = "192.168.0.1"      # <-- PASTE YOUR ROUTER'S IP ADDRESS HERE
+            trusted_gateway_ip = ""      # <-- PASTE YOUR ROUTER'S IP ADDRESS HERE
             # ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
             # Extract the source MAC and IP from the captured ARP packet
@@ -41,4 +41,5 @@ def arp_spoof_detector(packet):
 print("🚀 Starting ARP Spoof Detector... (Press CTRL+C to stop)")
 # Start sniffing. 'store=0' saves memory, 'prn' specifies our callback function.
 # 'filter="arp"' makes sniffing much more efficient.
+
 sniff(store=0, prn=arp_spoof_detector, filter="arp", iface="Intel(R) Wi-Fi 6E AX211 160MHz")
